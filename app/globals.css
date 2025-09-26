@@ -1,0 +1,263 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Enhanced vibrant purple color tokens with better contrast */
+  --background: oklch(1 0 0); /* Pure White */
+  --foreground: oklch(0.15 0 0); /* Darker text for better contrast */
+  --card: oklch(0.98 0.01 285); /* Slightly purple-tinted white */
+  --card-foreground: oklch(0.15 0 0); /* Dark Gray */
+  --popover: oklch(1 0 0); /* Pure White */
+  --popover-foreground: oklch(0.15 0 0); /* Darker text */
+  --primary: oklch(0.55 0.28 285); /* Rich vibrant purple #6d28d9 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.42 0.32 285); /* Deep purple #4c1d95 */
+  --secondary-foreground: oklch(1 0 0); /* White */
+  --muted: oklch(0.96 0.02 285); /* Light purple tint */
+  --muted-foreground: oklch(0.45 0.08 285); /* Purple-tinted gray */
+  --accent: oklch(0.65 0.25 285); /* Bright purple #8b5cf6 */
+  --accent-foreground: oklch(1 0 0); /* White */
+  --destructive: oklch(0.55 0.22 25); /* Rich Red */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.9 0.02 285); /* Purple-tinted border */
+  --input: oklch(1 0 0); /* Pure White */
+  --ring: oklch(0.55 0.28 285); /* Vibrant purple ring */
+  --chart-1: oklch(0.55 0.28 285); /* Rich purple */
+  --chart-2: oklch(0.42 0.32 285); /* Deep purple */
+  --chart-3: oklch(0.75 0.15 85); /* Gold for highlights */
+  --chart-4: oklch(0.65 0.25 285); /* Bright purple */
+  --chart-5: oklch(0.75 0.2 285); /* Light purple */
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0); /* Pure White */
+  --sidebar-foreground: oklch(0.15 0 0); /* Darker text */
+  --sidebar-primary: oklch(0.55 0.28 285); /* Rich purple */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White */
+  --sidebar-accent: oklch(0.65 0.25 285); /* Bright purple */
+  --sidebar-accent-foreground: oklch(1 0 0); /* White */
+  --sidebar-border: oklch(0.9 0.02 285); /* Purple-tinted border */
+  --sidebar-ring: oklch(0.55 0.28 285); /* Rich purple ring */
+}
+
+.dark {
+  /* Enhanced dark mode with deeper, more vibrant purples */
+  --background: oklch(0.06 0.03 285); /* Deep purple-black */
+  --foreground: oklch(0.95 0.02 285); /* Light purple-white */
+  --card: oklch(0.1 0.04 285); /* Dark purple card */
+  --card-foreground: oklch(0.95 0.02 285); /* Light purple-white */
+  --popover: oklch(0.1 0.04 285); /* Dark purple */
+  --popover-foreground: oklch(0.95 0.02 285); /* Light purple-white */
+  --primary: oklch(0.7 0.25 285); /* Bright purple for dark mode */
+  --primary-foreground: oklch(0.06 0.03 285); /* Dark background */
+  --secondary: oklch(0.2 0.06 285); /* Dark purple secondary */
+  --secondary-foreground: oklch(0.95 0.02 285); /* Light text */
+  --muted: oklch(0.2 0.06 285); /* Dark purple muted */
+  --muted-foreground: oklch(0.7 0.1 285); /* Purple-tinted gray */
+  --accent: oklch(0.2 0.06 285); /* Dark purple accent */
+  --accent-foreground: oklch(0.95 0.02 285); /* Light text */
+  --destructive: oklch(0.55 0.22 25); /* Rich Red */
+  --destructive-foreground: oklch(0.95 0.02 285); /* Light text */
+  --border: oklch(0.2 0.06 285); /* Dark purple border */
+  --input: oklch(0.2 0.06 285); /* Dark purple input */
+  --ring: oklch(0.55 0.28 285); /* Vibrant purple ring */
+  --chart-1: oklch(0.7 0.25 285); /* Bright purple */
+  --chart-2: oklch(0.75 0.2 285); /* Light purple */
+  --chart-3: oklch(0.75 0.15 85); /* Gold */
+  --chart-4: oklch(0.55 0.28 285); /* Rich purple */
+  --chart-5: oklch(0.42 0.32 285); /* Deep purple */
+  --sidebar: oklch(0.12 0.05 285); /* Dark purple sidebar */
+  --sidebar-foreground: oklch(0.95 0.02 285); /* Light text */
+  --sidebar-primary: oklch(0.7 0.25 285); /* Bright purple */
+  --sidebar-primary-foreground: oklch(0.06 0.03 285); /* Dark text */
+  --sidebar-accent: oklch(0.2 0.06 285); /* Dark purple accent */
+  --sidebar-accent-foreground: oklch(0.95 0.02 285); /* Light text */
+  --sidebar-border: oklch(0.2 0.06 285); /* Dark purple border */
+  --sidebar-ring: oklch(0.55 0.28 285); /* Rich purple ring */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Added smooth scrolling for navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced gradient classes with luxury purple variations and effects */
+  .gradient-purple {
+    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 25%, #8b5cf6 75%, #a855f7 100%);
+  }
+
+  .gradient-purple-luxury {
+    background: linear-gradient(135deg, #581c87 0%, #6d28d9 25%, #7c3aed 50%, #8b5cf6 75%, #a855f7 100%);
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.3);
+  }
+
+  .gradient-purple-soft {
+    background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 25%, #8b5cf6 75%, #7c3aed 100%);
+  }
+
+  .gradient-purple-dark {
+    background: linear-gradient(135deg, #3b0764 0%, #581c87 25%, #6d28d9 75%, #4c1d95 100%);
+  }
+
+  .gradient-purple-vibrant {
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 25%, #a855f7 50%, #c084fc 75%, #e879f9 100%);
+  }
+
+  .gradient-purple-deep {
+    background: linear-gradient(135deg, #1e1b4b 0%, #3b0764 25%, #581c87 50%, #6d28d9 75%, #7c3aed 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 25%, #8b5cf6 50%, #a855f7 75%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced section background gradients with more vibrant purples */
+  .section-gradient-1 {
+    background: linear-gradient(
+      135deg,
+      rgba(109, 40, 217, 0.12) 0%,
+      rgba(124, 58, 237, 0.08) 50%,
+      rgba(139, 92, 246, 0.04) 100%
+    );
+  }
+
+  .section-gradient-2 {
+    background: linear-gradient(
+      45deg,
+      rgba(168, 85, 247, 0.1) 0%,
+      rgba(139, 92, 246, 0.06) 50%,
+      rgba(124, 58, 237, 0.03) 100%
+    );
+  }
+
+  .section-gradient-3 {
+    background: linear-gradient(
+      225deg,
+      rgba(124, 58, 237, 0.15) 0%,
+      rgba(109, 40, 217, 0.08) 50%,
+      rgba(88, 28, 135, 0.04) 100%
+    );
+  }
+
+  .section-gradient-4 {
+    background: linear-gradient(
+      315deg,
+      rgba(192, 132, 252, 0.12) 0%,
+      rgba(168, 85, 247, 0.08) 50%,
+      rgba(139, 92, 246, 0.04) 100%
+    );
+  }
+
+  /* Added luxury hero gradient overlay with deeper purples */
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(59, 7, 100, 0.9) 0%,
+      rgba(88, 28, 135, 0.8) 25%,
+      rgba(109, 40, 217, 0.7) 50%,
+      rgba(124, 58, 237, 0.6) 75%,
+      rgba(139, 92, 246, 0.5) 100%
+    );
+  }
+
+  /* Added luxury card gradient with subtle purple tinting */
+  .card-gradient-purple {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(252, 250, 255, 0.95) 50%,
+      rgba(248, 245, 255, 0.92) 100%
+    );
+    border: 1px solid rgba(109, 40, 217, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Added luxury hover effects */
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(109, 40, 217, 0.15);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(109, 40, 217, 0.4);
+  }
+
+  /* Added animation delays for staggered effects */
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+/* Flip card helpers */
+[perspective="1000px"] { perspective: 1000px; }
+[transform-style="preserve-3d"] { transform-style: preserve-3d; }
+[backface-visibility="hidden"] { backface-visibility: hidden; }
