@@ -11,8 +11,12 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Isabella Hair Artistry - Luxury Hair Salon",
-  description: "Premium hair styling and artistry services with over 15 years of experience",
+  description:
+    "Premium hair styling and artistry services with over 15 years of experience",
   generator: "v0.app",
+  verification: {
+    google: "RTNgC8Wtic3EwXTqH6QM5pstESyqmOyu_IXWYH8IPTc",
+  },
 }
 
 export default function RootLayout({
