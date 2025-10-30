@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Isabella Hair Artistry - Luxury Hair Salon",
+  title: "Isabella Hair Artistry",
   description:
     "Premium hair styling and artistry services with over 15 years of experience",
   verification: {
